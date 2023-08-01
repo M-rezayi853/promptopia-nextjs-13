@@ -1,9 +1,12 @@
 import '@styles/globals.css'
 import { FC, ReactNode } from 'react'
-import localFont from '@next/font/local'
+import localFont from 'next/font/local'
+
+import Nav from '@components/Nav'
+import Provider from '@components/Provider'
 
 export const metadata = {
-  title: 'پرمتوپیا',
+  title: 'پرامتوپیا',
   description: 'کشف و به اشتراک گذاری درخواست های هوش مصنوعی',
 }
 
@@ -85,11 +88,16 @@ const RootLayout: FC<Props> = ({ children }): JSX.Element => {
   return (
     <html lang='fa' dir='rtl' className={`${iranYekan.variable}`}>
       <body>
-        <div className='main'>
-          <div className='gradient' />
-        </div>
+        <Provider>
+          <div className='main'>
+            <div className='gradient' />
+          </div>
 
-        <main className='app'>{children}</main>
+          <main className='app'>
+            <Nav />
+            {children}
+          </main>
+        </Provider>
       </body>
     </html>
   )
