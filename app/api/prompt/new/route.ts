@@ -1,17 +1,9 @@
-import { NextApiRequest, NextApiResponse } from 'next'
+import { NextRequest, NextResponse } from 'next/server'
 
 import { connectToDB } from '@utils/database'
 import Prompt from '@models/prompt'
 
-export interface CustomNextApiRequest extends NextApiRequest {
-  json(): {
-    userId: string
-    prompt: string
-    tag: string
-  }
-}
-
-export const POST = async (req: CustomNextApiRequest, res: NextApiResponse) => {
+export const POST = async (req: NextRequest, res: NextResponse) => {
   const { userId, prompt, tag } = await req.json()
 
   try {

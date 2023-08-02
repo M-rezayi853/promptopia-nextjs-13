@@ -1,11 +1,10 @@
-import { NextApiRequest, NextApiResponse } from 'next'
+import { NextRequest, NextResponse } from 'next/server'
 
 import { connectToDB } from '@utils/database'
 import Prompt from '@models/prompt'
-import { CustomNextApiRequest } from '../new/route'
 
 // GET (read)
-export const GET = async (req: NextApiRequest, { params }) => {
+export const GET = async (req: NextRequest, { params }) => {
   try {
     await connectToDB()
 
@@ -20,7 +19,7 @@ export const GET = async (req: NextApiRequest, { params }) => {
 }
 
 // PATCH (update)
-export const PATCH = async (request: CustomNextApiRequest, { params }) => {
+export const PATCH = async (request: NextRequest, { params }) => {
   const { prompt, tag } = await request.json()
 
   try {
@@ -43,7 +42,7 @@ export const PATCH = async (request: CustomNextApiRequest, { params }) => {
 }
 
 // DELETE (delete)
-export const DELETE = async (request, { params }) => {
+export const DELETE = async (request: NextRequest, { params }) => {
   try {
     await connectToDB()
 
