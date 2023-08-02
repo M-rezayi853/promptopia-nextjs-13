@@ -75,9 +75,9 @@ const Nav: FC<Props> = (): JSX.Element => {
                   type='button'
                   key={provider.name}
                   onClick={() => signIn(provider.id)}
-                  className='black_btn'
+                  className='black_btn mx-1'
                 >
-                  ورود
+                  ورود با {provider.name}
                 </button>
               ))}
           </>
@@ -138,9 +138,9 @@ const Nav: FC<Props> = (): JSX.Element => {
                   type='button'
                   key={provider.name}
                   onClick={() => signIn(provider.id)}
-                  className='black_btn'
+                  className='black_btn mx-1'
                 >
-                  ورود
+                  ورود با {provider.name}
                 </button>
               ))}
           </>
