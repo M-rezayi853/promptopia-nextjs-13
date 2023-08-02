@@ -24,7 +24,7 @@ const Form: FC<Props> = ({
         <span className='blue_gradient'>{type} پست</span>
       </h1>
 
-      <p className='dese text-right max-w-md mt-4'>
+      <p className='dese text-right max-w-md mt-4 text-sm'>
         {type} و دستورات شگفت انگیز را با جهان به اشتراک بگذارید، و اجازه دهید
         تخیل شما با هر پلتفرم مجهز به هوش مصنوعی اجرا شود.
       </p>

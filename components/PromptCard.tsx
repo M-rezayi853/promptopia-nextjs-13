@@ -74,7 +74,7 @@ const PromptCard: FC<Props> = ({
           />
         </div>
       </div>
-      <p className='my-4 text-sm text-gray-700'>{post.prompt}</p>
+      <p className='my-4 text-xs sm:text-sm text-gray-700'>{post.prompt}</p>
       <p
         className='text-sm blue_gradient cursor-pointer'
         onClick={() => handleTagClick && handleTagClick(post.tag)}

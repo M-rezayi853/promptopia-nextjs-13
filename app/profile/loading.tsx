@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 interface Props {}
 
-const loading: FC<Props> = (): JSX.Element => {
+const Loading: FC<Props> = (): JSX.Element => {
   return (
     <div className='w-full flex-center'>
       <Image
@@ -17,4 +17,4 @@ const loading: FC<Props> = (): JSX.Element => {
   )
 }
 
-export default loading
+export default Loading
